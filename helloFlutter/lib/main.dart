@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <TextSpan>[
                   TextSpan(text: 'hi'),
                   TextSpan(text: 'Sorry '),
-                  TextSpan(text: 'I love you.')
+                  TextSpan(text: 'I love you.Hi')
                 ]
                 )
             )
