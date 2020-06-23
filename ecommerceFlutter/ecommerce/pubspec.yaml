@@ -51,6 +51,11 @@ flutter:
     - images/jean.jpg
     - images/bag.jpg
     - images/shoes.jpg
+    - images/products/jeans1.jpg
+    - images/products/jean2.jpg
+    - images/products/shirt1.jpg
+    - images/products/shirt2.jpg
+    - images/products/shirt3.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

@@ -1,3 +1,4 @@
+import 'package:ecommerce/components/ProductList.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecommerce/components/CategoryList.dart';
@@ -29,14 +30,14 @@ class _State extends State<HomePage> {
     );
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Royal Crazes'),
-      //   backgroundColor: Colors.red ,
-      //   actions: <Widget>[
-      //      new IconButton(icon: Icon( Icons.search,color: Colors.white),onPressed: null,),
-      //      new IconButton(icon: Icon( Icons.shopping_cart,color: Colors.white),onPressed: null,)
-      //   ],
-      //   ),
+      appBar: AppBar(        
+        title: Text('Royal Crazes'),
+        backgroundColor: Colors.red ,
+        actions: <Widget>[
+           new IconButton(icon: Icon( Icons.search,color: Colors.white),onPressed: null,),
+           new IconButton(icon: Icon( Icons.shopping_cart,color: Colors.white),onPressed: null,)
+        ],
+        ),
         drawer: new Drawer(              
           child:Container(
           color: Colors.red,
@@ -128,7 +129,7 @@ class _State extends State<HomePage> {
           )
         ),
         ),
-        body: ListView(
+        body: ListView(          
           children: <Widget>[
             
             image_carousel,
@@ -138,8 +139,20 @@ class _State extends State<HomePage> {
             child: new Text('Categories'),
             ),
            
-           CategoryList()
+            CategoryList(),
+
+            new Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: new Text('Recent Products'),
+            ),
             
+            
+            Container(
+              height: 1000.0,
+              child: ProductList(),
+            )
+           
+
             ],
         
           ),
