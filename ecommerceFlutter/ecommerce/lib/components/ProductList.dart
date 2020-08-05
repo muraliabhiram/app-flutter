@@ -58,7 +58,8 @@ class _State extends State<ProductList> {
     return GridView.builder(      
       itemCount: product_List.length ,
       scrollDirection:Axis.vertical,      
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3), 
+      
       itemBuilder: (BuildContext context, int index)
       {
         return Product(

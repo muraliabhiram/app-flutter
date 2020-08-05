@@ -2,7 +2,7 @@ import 'package:ecommerce/model/User.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/ProductDetails.dart';
 import 'package:http/http.dart' as http;
-import 'package:goog';
+
 
 
 class Product extends StatelessWidget {
@@ -15,7 +15,7 @@ class Product extends StatelessWidget {
 
 Future getValues()async{
    http.Response res = await http.get("https://reqres.in/api/users?page=2",headers: {"Accept":"application/json"});
-   var resdata = json.decode(res.body);
+   //var resdata = json.decode(res.body);
    
   
   // print(resbody);
