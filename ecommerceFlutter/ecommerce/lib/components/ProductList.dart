@@ -55,21 +55,74 @@ class _State extends State<ProductList> {
   ];
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(      
-      itemCount: product_List.length ,
-      scrollDirection:Axis.vertical,      
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3), 
+    return GridView.count(crossAxisCount: 2,
+    mainAxisSpacing: 10,
+    crossAxisSpacing: 10,
+    scrollDirection: Axis.vertical,
+    children: product_List.map((imageDetail) =>  Product(
+          product_name: imageDetail["product_name"],
+          product_image: imageDetail["product_image"],
+          product_oldPrice: imageDetail["product_oldPrice"],
+          product_price: imageDetail["product_price"],
+        ),
+        ).toList()
+    
+    
+    // <Widget>[
+    //   Product(
+    //       product_name: product_List[0]["product_name"],
+    //       product_image: product_List[0]["product_image"],
+    //       product_oldPrice: product_List[0]["product_oldPrice"],
+    //       product_price: product_List[0]["product_price"],
+    //     ),
+    //     Product(
+    //       product_name: product_List[1]["product_name"],
+    //       product_image: product_List[1]["product_image"],
+    //       product_oldPrice: product_List[1]["product_oldPrice"],
+    //       product_price: product_List[1]["product_price"],
+    //     ),
+    //     Product(
+    //       product_name: product_List[2]["product_name"],
+    //       product_image: product_List[2]["product_image"],
+    //       product_oldPrice: product_List[2]["product_oldPrice"],
+    //       product_price: product_List[2]["product_price"],
+    //     ),
+    //     Product(
+    //       product_name: product_List[3]["product_name"],
+    //       product_image: product_List[3]["product_image"],
+    //       product_oldPrice: product_List[3]["product_oldPrice"],
+    //       product_price: product_List[3]["product_price"],
+    //     ),
+    //     Product(
+    //       product_name: product_List[4]["product_name"],
+    //       product_image: product_List[4]["product_image"],
+    //       product_oldPrice: product_List[4]["product_oldPrice"],
+    //       product_price: product_List[4]["product_price"],
+    //     ),
+    //     Product(
+    //       product_name: product_List[5]["product_name"],
+    //       product_image: product_List[5]["product_image"],
+    //       product_oldPrice: product_List[5]["product_oldPrice"],
+    //       product_price: product_List[5]["product_price"],
+    //     ),
+    //     ]
+    );
+    // return  GridView.builder(      
+    //   itemCount: product_List.length ,
+    //   scrollDirection:Axis.vertical,      
+    //   //gridDelegate:  
+    //   //SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
       
-      itemBuilder: (BuildContext context, int index)
-      {
-        return Product(
-          product_name: product_List[index]["product_name"],
-          product_image: product_List[index]["product_image"],
-          product_oldPrice: product_List[index]["product_oldPrice"],
-          product_price: product_List[index]["product_price"],
-        );
-      }
+    //   itemBuilder: (BuildContext context, int index)
+    //   {
+    //     return Product(
+    //       product_name: product_List[index]["product_name"],
+    //       product_image: product_List[index]["product_image"],
+    //       product_oldPrice: product_List[index]["product_oldPrice"],
+    //       product_price: product_List[index]["product_price"],
+    //     );
+    //   }
       
-      );
+    //   );
   }
 }

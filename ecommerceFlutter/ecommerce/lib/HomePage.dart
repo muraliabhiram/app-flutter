@@ -155,10 +155,9 @@ class HomePage  extends StatelessWidget {
             
             
             Container(
-              height: 1000.0,
+              height: MediaQuery.of(context).size.height*0.5,
               child: ProductList(),
-            )
-           
+            ),
 
             ],
         

@@ -24,7 +24,10 @@ Future getValues()async{
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(  
+      //child: ClipRRect(child: Image.asset(product_image,fit: BoxFit.cover))
+   // );
+
       child: Hero(
         tag: this.product_name,
         child:Material(
@@ -47,9 +50,11 @@ Future getValues()async{
           ),
           child: Image.asset(product_image,fit: BoxFit.cover),
            ),
-        ) ,)
+        ) ,
+        )
       
       )
     );
+    
   }
 }
